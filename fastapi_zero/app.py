@@ -1,13 +1,11 @@
 from fastapi import FastAPI
 
+from fastapi_zero.routers import auth, todos, users
+import sys
+import asyncio
+
+
 app = FastAPI()
-
-
-@app.get('/')
-def read_root():
-    return {'message': 'Olá mundo'}
-
-
-@app.get('/status')
-def get_status():
-    return
+app.include_router(auth.router)
+app.include_router(users.router)
+app.include_router(todos.router)

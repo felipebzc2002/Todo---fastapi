@@ -11,7 +11,17 @@ dependencies = [
     "fastapi[standard] (>=0.141.1,<0.142.0)",
     "ruff (>=0.16.1,<0.17.0)",
     "pytest (>=9.1.1,<10.0.0)",
-    "pytest-cov (>=7.1.0,<8.0.0)"
+    "pytest-cov (>=7.1.0,<8.0.0)",
+    "sqlalchemy[asyncio] (>=2.0.52,<3.0.0)",
+    "pydantic-settings (>=2.15.0,<3.0.0)",
+    "alembic (>=1.19.1,<2.0.0)",
+    "pwdlib[argon2] (>=0.3.1,<0.4.0)",
+    "pyjwt (>=2.13.0,<3.0.0)",
+    "tzdata (>=2026.3,<2027.0)",
+    "fastapi-pagination (>=0.15.16,<0.16.0)",
+    "psycopg[binary] (>=3.3.5,<4.0.0)",
+    "asyncpg (>=0.31.0,<0.32.0)",
+    "testcontainers (>=4.15.0,<5.0.0)"
 ]
 
 
@@ -22,7 +32,8 @@ build-backend = "poetry.core.masonry.api"
 [dependency-groups]
 dev = [
     "ruff (>=0.16.1,<0.17.0)",
-    "taskipy (>=1.14.1,<2.0.0)"
+    "taskipy (>=1.14.1,<2.0.0)",
+    "freezegun (>=1.5.5,<2.0.0)"
 ]
 
 [tool.ruff]
